@@ -10,7 +10,7 @@
 // document.all[10].textContent="Hello"
 //...............................getElementById.................................//
 var HeaderTitle=document.getElementById('header-title');
-var header=document.getElementById('main-header');
+var header=document.getElementById('main-header')
 console.log(HeaderTitle);
 // HeaderTitle.textContent='hello';
 // HeaderTitle.innerText='goodbye';
@@ -24,10 +24,18 @@ header.style.borderBottom='solid 3px #000'
 // items[1].textContent='hello';
 // items[1].style.fontWeight='bold';
 // items[1].style.backgroundColor='yellow';
+//========================================TASK 03============================================
+//var items1=document.getElementById('tag')
+//console.log(items);
+//items1.style.fontWeight='bold';
+//items1.style.color='green';
 
-var items1=document.getElementById('tag')
-console.log(items);
-items1.style.fontWeight='bold';
-items1.style.color='green';
+//========================================TASK 04==================================================
+var items2=document.getElementsByClassName('list-group-item');
+console.log(items2);
+items2[2].style.backgroundColor='green';
 
-
+for(var i=0;i<items2.length;i++)
+{
+    items2[i].style.fontWeight='bold';
+}
