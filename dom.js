@@ -31,11 +31,26 @@ header.style.borderBottom='solid 3px #000'
 //items1.style.color='green';
 
 //========================================TASK 04==================================================
-var items2=document.getElementsByClassName('list-group-item');
-console.log(items2);
-items2[2].style.backgroundColor='green';
+// var items2=document.getElementsByClassName('list-group-item');
+// console.log(items2);
+// items2[2].style.backgroundColor='green';
 
-for(var i=0;i<items2.length;i++)
+// for(var i=0;i<items2.length;i++)
+// {
+//     items2[i].style.fontWeight='bold';
+// }
+
+
+//=========================================TASK 05======================================================//
+
+var li=document.getElementsByTagName('li');
+console.log(li);
+console.log(li[1]);
+li[1].textContent='hello 2';
+li[1].style.fontWeight='bold';
+li[1].style.background='yellow'
+
+for(var i=0;i<li.length;i++)
 {
-    items2[i].style.fontWeight='bold';
+    li[i].style.backgroundColor='#f4f4f4';
 }
