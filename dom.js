@@ -43,14 +43,44 @@ header.style.borderBottom='solid 3px #000'
 
 //=========================================TASK 05======================================================//
 
-var li=document.getElementsByTagName('li');
-console.log(li);
-console.log(li[1]);
-li[1].textContent='hello 2';
-li[1].style.fontWeight='bold';
-li[1].style.background='yellow'
+// var li=document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent='hello 2';
+// li[1].style.fontWeight='bold';
+// li[1].style.background='yellow'
 
-for(var i=0;i<li.length;i++)
+// for(var i=0;i<li.length;i++)
+// {
+//     li[i].style.backgroundColor='#f4f4f4';
+// }
+//===========================================TASK 06==========================================================
+//****************************QUERYSELECTOR*************************************
+//1.Make the 2nd item have green background color
+var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor='red';
+
+//Make the 3rd item invisible
+var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.display='none';
+//------------------------------------------------------------------------------------------------
+//****************************************2.querySelectorAll*************************************
+//1.Using QuerySelectorALL change the font color to green for 2nd item in the item list
+
+ var listItems = document.querySelectorAll('li');
+
+    console.log(listItems)
+   listItems[1].style.color = 'green';
+
+
+//2.Choose all the odd elements and make their background green using QuerySelectorALL﻿
+var odd=document.querySelectorAll('li:nth-child(odd)');
+for(var i=0;i<odd.length;i++)
 {
-    li[i].style.backgroundColor='#f4f4f4';
+    odd[i].style.backgroundColor='#f4f4f4';
 }
+
+
+
+
+//============================================================================================================
