@@ -163,12 +163,14 @@ var itemList=document.querySelector('#items');
 //********************1 add Button********************** */
 var form=document.getElementById('addForm');
 var itemList=document.getElementById('items');
-
+var filter=document.getElementById('filter');
 //Form Submit Event
 form.addEventListener('submit',addItem);
-//******************Delete event listner */
+//Delete event listner */
 
 itemList.addEventListener('click',removeItem);
+//filter  event listner
+filter.addEventListener('keyup',filterItems);
 //add item
 function addItem(e)
 {
@@ -220,3 +222,30 @@ function addItem(e)
      }
     
   }
+  //fiterItem
+  function filterItems(e)
+  {
+    //convrt text to lowercase
+    var text=e.target.value.toLowerCase();
+ 
+    
+     var items=itemList.getElementsByTagName('li');
+    //convert to an array
+    Array.from(items).forEach(function(item)
+    {
+  var itemName=item.firstChild.textContent;
+  if(itemName.toLowerCase().indexOf(text)!=-1)
+  {
+
+    item.style.display='block';
+  }
+  else
+  {
+
+    item.style.display='none';
+    
+  }
+  console.log(itemName);
+    });
+
+}
