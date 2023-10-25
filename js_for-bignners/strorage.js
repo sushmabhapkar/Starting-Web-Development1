@@ -18,12 +18,14 @@ function addItem(e)
 
     const name=document.getElementById('name').value;
     const email=document.getElementById('email').value;
+//generate unique key
+ const uniqueKey=Date.now();
 
     const userDetails={
         name:name,
         email:email
     };
-    localStorage.setItem('userDetails',JSON.stringify(userDetails));
+    localStorage.setItem('userDetails_${uniqueKey}',JSON.stringify(userDetails));
     alert("Details have been stored in local storage.");
 
 };
