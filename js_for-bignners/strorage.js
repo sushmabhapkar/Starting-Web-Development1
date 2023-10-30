@@ -46,35 +46,31 @@ function addItem(e) {
         localStorage.removeItem(userDetails.email);
         parentElem.removeChild(childElem);
        }
-       
-       childElem.appendChild(deleteButton);
+
+    //    childElem.appendChild(deleteButton);
+    //     parentElem.appendChild(childElem);
+
+    
+    const editButton=document.createElement('input');
+    editButton.type="button";
+    editButton.value='Edit';
+    editButton.onclick=()=>
+    {
+
+      localStorage.removeItem(userDetails.email);
+      parentElem.removeChild(childElem);
+      document.getElementById('usernameInputTag').value=userDetails.name;
+      document.getElementById('emailInputField').value=userDetails.email;
+      document.getElementById('phoneNumberInputTag').value=userDetails.phonenumber;
+
+
+    }
+        childElem.appendChild(deleteButton);
+        childElem.appendChild(editButton);
         parentElem.appendChild(childElem);
+        
+
 
         
     }
-
-
-
-
-
-
-
-
-   
-    // localStorage.setItem('userDetails', JSON.stringify(storedUserDetails))||[];
-    // alert("Details have been stored in local storage.");
-    // const li= document.createElement('li')
-    // const nameElement = document.createElement('span');
-    // nameElement.textContent = `Name: ${name}`;
-    // const emailElement = document.createElement('span');
-    // emailElement.textContent = `Email: ${email}`;
-    // const phoneElement = document.createElement('span');
-    // phoneElement.textContent = `Phone Number: ${phonenumber}`;
-    // li.appendChild(nameElement)
-    // li.appendChild(emailElement)
-    // li.appendChild(phoneElement)
-    // list.appendChild(li);
-      
-
 };
-
